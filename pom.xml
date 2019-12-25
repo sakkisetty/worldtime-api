@@ -28,7 +28,7 @@
 				<configuration>
 				<cloudMuleDeployment>
 				<username>sudheerakkisetty</username>
-				<environment>Design</environment>
+				<environment>Development</environment>
 				<workers>1</workers>
 				<workerType>Micro</workerType>
 				<applicationName>Worldtime</applicationName>
