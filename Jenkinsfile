@@ -3,12 +3,12 @@ agent any
 stages{
 stage('Build Application')
 step{
-   bat 'mvn clean install -MSkipUnittests =true
+   bat 'mvn clean install'
 }
 }
 stage('deploy Application')
 step{
-   bat 'mvn package deploy -DmuleDeploy -MSkipUnittests =true
+   bat 'mvn package deploy -DmuleDeploy'
 }
 }
 
