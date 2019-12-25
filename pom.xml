@@ -26,6 +26,15 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
+				<cloudMuleDeployment>
+				<username>sudheerakkisetty</username>
+				<environment>Design</environment>
+				<workers>1</workers>
+				<workerType>Micro</workerType>
+				<applicationName>Worldtime</applicationName>
+				<password>Creation0909!</password>
+				<muleVersion>4.2.1</muleVersion>
+				</cloudMuleDeployment>
 				</configuration>
 			</plugin>
 		</plugins>
