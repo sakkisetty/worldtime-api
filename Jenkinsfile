@@ -6,7 +6,12 @@ pipeline {
         bat 'mvn clean install'
       }
     }
-      stage('Deploy Application') { 
+    stage('Upload  to Nexus repository') { 
+      steps {
+        bat 'mvn clean deploy'
+      }
+    }
+      stage('Deploy Application to Cloudhub') { 
       steps {
         bat 'mvn clean package deploy -DmuleDeploy'
       }
