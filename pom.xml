@@ -25,17 +25,28 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-				<cloudMuleDeployment>
-				<username>sudheerakkisetty</username>
-				<environment>Development</environment>
-				<workers>1</workers>
+				
+ <configuration>
+    <cloudHubDeployment>
+      <uri>https://anypoint.mulesoft.com</uri>
+      <muleVersion>4.2.1</muleVersion>
+      <username>sudheerakkisetty</username>
+      <password>Creation0909!</password>
+      <applicationName>Worldtime-api</applicationName>
+      <environment>Development</environment>
+  				<workers>1</workers>
 				<workerType>Micro</workerType>
-				<applicationName>Worldtime</applicationName>
-				<password>Creation0909!</password>
-				<muleVersion>4.2.1</muleVersion>
-				</cloudMuleDeployment>
-				</configuration>
+    </cloudHubDeployment>
+  </configuration>				
+				  <executions>
+      <execution>
+         <id>default-deploy</id>
+         <phase>deploy</phase>
+         <goals>
+            <goal>deploy</goal>
+         </goals>
+      </execution>
+   </executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -80,5 +91,11 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-
+<distributionManagement>
+   <snapshotRepository>
+      <id>worldapi-demo</id>
+      <layout>default</layout>
+      <url>http://localhost:8081/repository/worldapi-demo/</url>
+   </snapshotRepository>
+</distributionManagement>
 </project>

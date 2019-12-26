@@ -8,7 +8,7 @@ pipeline {
     }
       stage('Deploy Application') { 
       steps {
-        bat 'mvn package deploy -DmuleDeploy'
+        bat 'mvn clean package deploy -DmuleDeploy'
       }
     }
   }
