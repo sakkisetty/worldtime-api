@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "f5f82a76-945f-49eb-8ba0-4da2d364b97a",
+		"name": "WorldTime",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get-WorldTime",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9d0c4ed5-9bf1-4b82-a64f-bb388098d42c",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"pm.test(\"Response time is less than 600ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://worldtime-api.us-e1.cloudhub.io/timezone/America/Chicago",
+					"protocol": "http",
+					"host": [
+						"worldtime-api",
+						"us-e1",
+						"cloudhub",
+						"io"
+					],
+					"path": [
+						"timezone",
+						"America",
+						"Chicago"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
