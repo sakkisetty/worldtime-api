@@ -36,6 +36,9 @@
       <environment>Development</environment>
   				<workers>1</workers>
 				<workerType>Micro</workerType>
+				<properties>
+  <http.port>8089</http.port>
+</properties>
     </cloudHubDeployment>
   </configuration>				
 				  <executions>
@@ -95,7 +98,7 @@
    <snapshotRepository>
       <id>worldapi-demo</id>
       <layout>default</layout>
-      <url>http://localhost:8081/repository/worldapi-demo/</url>
+      <url>http://localhost:8089/repository/worldapi-demo/</url>
    </snapshotRepository>
 </distributionManagement>
 </project>
