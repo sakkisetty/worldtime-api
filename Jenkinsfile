@@ -1,6 +1,14 @@
 pipeline {
   agent any
+   environment {
+        SECRET = vault path: 'secrets/nexuspath', key: 'url', engineVersion: "2"
+    }
   stages {
+   stage("read vault key") {
+            steps {
+                echo "${SECRET}"
+            }
+        }
     stage('Build Application') { 
       steps {
         bat 'mvn clean install'
