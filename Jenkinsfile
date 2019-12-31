@@ -6,7 +6,7 @@ pipeline {
   stages {
    stage("read vault key") {
             steps {
-                echo "${SECRET}"
+                bat 'vault kv get secret/nexuspath'
             }
         }
     stage('Build Application') { 
