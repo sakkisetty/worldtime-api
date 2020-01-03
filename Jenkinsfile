@@ -1,7 +1,6 @@
 pipeline {
   agent any
-  stages {
-   
+  stages { 
     stage('Build Application') { 
       steps {
         bat 'mvn clean install'
