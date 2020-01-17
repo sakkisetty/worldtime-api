@@ -16,9 +16,10 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"pm.test(\"Response time is less than 6000ms\", function () {",
-							"    pm.expect(pm.response.responseTime).to.be.below(6000);",
-							"});"
+							"pm.test(\"Response time is less than 5000ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(5000);",
+							"});",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -28,7 +29,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://worldtime-api.us-e1.cloudhub.io/timezone/America/Chicago",
+					"raw": "http://worldtime-api.us-e1.cloudhub.io/timezone/America/Phoneix",
 					"protocol": "http",
 					"host": [
 						"worldtime-api",
@@ -39,7 +40,7 @@
 					"path": [
 						"timezone",
 						"America",
-						"Chicago"
+						"Phoneix"
 					]
 				}
 			},
